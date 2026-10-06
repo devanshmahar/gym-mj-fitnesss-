@@ -181,10 +181,10 @@ export function FacilitiesSection() {
 
 /* ── Trainers ── */
 const trainers = [
-  { name: 'Arjun Sharma', role: 'Head Strength Coach', specialty: 'Powerlifting & Muscle Building', exp: '10 yrs', img: 'https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&q=80' },
-  { name: 'Priya Nair',   role: 'Cardio & HIIT Expert', specialty: 'Fat Loss & Endurance', exp: '8 yrs', img: 'https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?w=400&q=80' },
-  { name: 'Ravi Kumar',   role: 'Yoga & Flexibility', specialty: 'Mobility & Mind-Body', exp: '12 yrs', img: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80' },
-  { name: 'Sneha Patel',  role: 'Nutrition Coach',     specialty: 'Diet Planning & Wellness', exp: '7 yrs', img: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&q=80' },
+  { name: 'Dev',     role: 'Head Strength Coach', specialty: 'Powerlifting & Muscle Building', exp: '10 yrs', img: '/coaches/dev.png' },
+  { name: 'Sameer',  role: 'Cardio & HIIT Expert', specialty: 'Fat Loss & Endurance', exp: '8 yrs', img: '/coaches/sameer.png' },
+  { name: 'Monika',  role: 'Yoga & Flexibility', specialty: 'Mobility & Mind-Body', exp: '12 yrs', img: '/coaches/monika.png' },
+  { name: 'Devansh', role: 'Nutrition Coach', specialty: 'Diet Planning & Wellness', exp: '7 yrs', img: '/coaches/devansh.png' },
 ];
 
 export function TrainersSection() {
