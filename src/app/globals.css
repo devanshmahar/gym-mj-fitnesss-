@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #39ff14;
+  --color-accent-alt: #ff6a00;
+  --font-family-sans: "Montserrat", "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --accent: #39ff14;
+  --accent-alt: #ff6a00;
+  --bg: #0a0a0a;
+  --bg-card: #111111;
+  --bg-card2: #181818;
+  --border: #2a2a2a;
+  --text-muted: #888888;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  font-family: var(--font-montserrat, "Montserrat"), "Poppins", sans-serif;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+/* ── Accent utilities ── */
+.text-accent   { color: var(--accent) !important; }
+.bg-accent     { background-color: var(--accent) !important; }
+.border-accent { border-color: var(--accent) !important; }
+
+/* ── Neon glow ── */
+.glow {
+  text-shadow: 0 0 20px var(--accent), 0 0 40px var(--accent);
+}
+.btn-glow {
+  box-shadow: 0 0 15px var(--accent), 0 0 30px rgba(57,255,20,0.3);
+}
+.btn-glow:hover {
+  box-shadow: 0 0 25px var(--accent), 0 0 50px rgba(57,255,20,0.5);
+}
+
+/* ── Card hover ── */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(57,255,20,0.12);
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #39ff14 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section divider ── */
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ── Nav link underline animation ── */
+.nav-link {
+  position: relative;
+  transition: color 0.2s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+.nav-link:hover { color: var(--accent); }
+
+/* ── Hero overlay ── */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0.55) 0%,
+    rgba(10,10,10,0.35) 50%,
+    rgba(10,10,10,0.92) 100%
+  );
+}
+
+/* ── Pulse animation ── */
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(57,255,20,0.45); }
+  50%       { box-shadow: 0 0 0 10px rgba(57,255,20,0); }
+}
+.pulse-green { animation: pulse-green 2s infinite; }
+
+/* ── Table hover ── */
+.table-row-hover:hover { background: rgba(57,255,20,0.04); }
+
+/* ── Status badges ── */
+.badge-active {
+  background: rgba(57,255,20,0.15);
+  color: #39ff14;
+  border: 1px solid rgba(57,255,20,0.35);
+}
+.badge-expired {
+  background: rgba(255,60,60,0.15);
+  color: #ff4444;
+  border: 1px solid rgba(255,60,60,0.35);
+}
+.badge-warning {
+  background: rgba(255,165,0,0.15);
+  color: #ffa500;
+  border: 1px solid rgba(255,165,0,0.35);
+}
+
+/* ── Select element dark styling ── */
+select {
+  color-scheme: dark;
+  background-color: #0a0a0a;
+  color: white;
+}
+
+select option {
+  background-color: #111;
+  color: white;
+}
